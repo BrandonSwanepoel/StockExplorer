@@ -1,0 +1,24 @@
+div.columns {
+  margin-top: 50px;
+}
+
+.table td {
+  font-size: 17px;
+  user-select: none;
+}
+
+.search {
+  float: right;
+  font-size: 17px;
+}
+
+.fa {
+  float: right;
+}
+
+.tableContainer {
+  border: 1px solid lightblue;
+  width: 1400px;
+  height: 300px;
+  overflow: auto;
+}

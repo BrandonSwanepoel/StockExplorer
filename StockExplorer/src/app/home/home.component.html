@@ -1,0 +1,4 @@
+<app-stocks (stockParent)="setStockParent($event)"></app-stocks>
+<div *ngIf="showStockValues">
+    <app-stock-values [stockParent]="stockParentValue"></app-stock-values>
+</div>

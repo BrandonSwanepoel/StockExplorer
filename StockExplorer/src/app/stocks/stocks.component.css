@@ -1,0 +1,8 @@
+.table th {
+  font-size: 17px;
+  min-width: 335px;
+}
+
+.selectedRow {
+  background-color: lightblue;
+}

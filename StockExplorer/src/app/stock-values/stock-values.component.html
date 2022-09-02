@@ -1,0 +1,26 @@
+<div class='container has-text-centered'>
+    <p class='title'>{{getTitle}}
+        <button (click)="exportToJson()" class="button is-success">Export to Json</button>
+    </p>
+    <input class="search" name="searchText" type="text" placeholder="Search..." [(ngModel)]="setSearchedText">
+    <hr>
+    <div class='columns'>
+        <div class="tableContainer">
+            <table class='table is-bordered'>
+                <thead>
+                    <tr>
+                        <th>Date<i class="fa fa-sort" [appSort]="stockChildren" data-order="desc" data-name="date"></i>
+                        <th>Value<i class="fa fa-sort" [appSort]="stockChildren" data-order="desc"
+                                data-name="value"></i></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let stockValue of stockChildren | searchFilter: getSearchedText">
+                        <td>{{stockValue.date}}</td>
+                        <td>{{stockValue.value}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

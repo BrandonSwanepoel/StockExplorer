@@ -1,0 +1,41 @@
+<section class="hero-body">
+    <div class='container has-text-centered'>
+        <p class='title'>{{getTitle}}</p>
+        <input class="search" name="searchText" type="text" placeholder="Search..." [(ngModel)]="setSearchedText">
+        <hr>
+        <div class='columns'>
+            <div class="tableContainer">
+                <table class='table is-bordered'>
+                    <thead>
+                        <tr>
+                            <th>Stock<i class="fa fa-sort" [appSort]="getStockParents" data-order="desc"
+                                    data-name="stock"></i>
+                            </th>
+                            <th>Industry<i class="fa fa-sort" [appSort]="getStockParents" data-order="desc"
+                                    data-name="industry"></i></th>
+                            <th>Sector<i class="fa fa-sort" [appSort]="getStockParents" data-order="desc"
+                                    data-name="sector"></i>
+                            </th>
+                            <th>Currency Code<i class="fa fa-sort" [appSort]="getStockParents" data-order="desc"
+                                    data-name="currency_Code"></i>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let stockParent of getStockParents | searchFilter: getSearchedText"
+                            [ngClass]="{'selectedRow':isSelected(stockParent)}">
+                            <td (click)="setStockValues(stockParent)">
+                                {{stockParent.stock}}</td>
+                            <td (click)="setStockValues(stockParent)">{{ stockParent.industry}}
+                            </td>
+                            <td (click)="setStockValues(stockParent)">{{ stockParent.sector }}
+                            </td>
+                            <td (click)="setStockValues(stockParent)">
+                                {{stockParent.currency_Code}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
