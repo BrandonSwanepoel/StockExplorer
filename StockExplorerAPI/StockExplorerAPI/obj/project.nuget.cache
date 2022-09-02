@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "n0u65vDkKr2MejYILg9pFBqK+OaZC5SMO4G5Gv5ONiRh3AO8VmRDjRvW3uKPnd6SaZlOoCORU+1dHwV+ke9mMA==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\AngularTest\\StockExplorerAPI\\StockExplorerAPI\\StockExplorerAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\brandons\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\brandons\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.28\\microsoft.netcore.app.host.win-x64.3.1.28.nupkg.sha512"
+  ],
+  "logs": []
+}
